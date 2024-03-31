@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Encode+Sans:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Reddit+Mono:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+    background-color: white;
+}
+
+.menu a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    color: orangered;
+    transition: all 0.3s linear;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: beige;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    transform: translate(-100%)
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+.fa-bars {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    color: orangered;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.fa-bars:hover {
+    color: beige;
+}
+
+.fa-times {
+    font-size: 1.5rem;
+    color: orangered;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: beige;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  1rem 1.5rem;
+}
+
+.logo {
+    color: beige
+}
+
+.connect,
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.connect {
+    height: 100vh;
+}
+
+.video-container {
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.connect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.connect {
+    display: grid;
+    place-items: center;
+}
+
+.video-banner {    
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.video-text {
+    max-width: 100rem;
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: beige;
+    text-shadow: 2px 2px 0 black,
+                 3px 3px 0 orangered;
+}
+
+.video-sub{    
+    font-size: 40px;
+    color: orangered;
+    margin-bottom: 10px; 
+    text-shadow: 1px 1px 0 beige,
+                 2px 2px 0 black;
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: orangered;
+    text-shadow: 0.5px 0.5px 0 beige,
+                 1px 1px 0 black;
+    font-size: 30px;
+    padding: 15px 30px;
+    border: 2px solid beige;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    border: 1px solid orangered; 
+}
+
+@media (min-width: 676px) {
+    .sidebar {
+        width: 500px;
+    }
+}
